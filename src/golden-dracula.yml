@@ -1,59 +1,97 @@
-name: Dracula
-author: Zeno Rocha
-maintainers:
-  - Derek P Sifford <dereksifford@gmail.com>
-semanticClass: theme.dracula
+name: Golden Dracula
+author: Max L, Zeno Rocha
+semanticClass: theme.golden-dracula
 dracula:
   base:
-    - &BG        '#282A36'
-    - &FG        '#F8F8F2'
-    - &SELECTION '#44475A'
-    - &COMMENT   '#6272A4'
-    - &CYAN      '#8BE9FD'
-    - &GREEN     '#50FA7B'
-    - &ORANGE    '#FFB86C'
-    - &PINK      '#FF79C6'
-    - &PURPLE    '#BD93F9'
-    - &RED       '#FF5555'
-    - &YELLOW    '#F1FA8C'
+    - &BG             '#282A36'
+    - &FG             '#F8F8F2'
+    - &SELECTION      '#44475A'
+    - &COMMENT        '#6272A4'
+    - &CYAN           '#8BE9FD'
+    - &GREEN          '#50FA7B'
+    - &ORANGE         '#FFB86C'
+    - &PINK           '#FF79C6'
+    - &PURPLE         '#BD93F9'
+    - &RED            '#FF5555'
+    - &YELLOW         '#F1FA8C'
   ansi:
-    - &COLOR0        '#21222C'
-    - &COLOR1        '#FF5555'
-    - &COLOR2        '#50FA7B'
-    - &COLOR3        '#F1FA8C'
-    - &COLOR4        '#BD93F9'
-    - &COLOR5        '#FF79C6'
-    - &COLOR6        '#8BE9FD'
-    - &COLOR7        '#F8F8F2'
-    - &COLOR8        '#6272A4'
-    - &COLOR9        '#FF6E6E'
-    - &COLOR10       '#69FF94'
-    - &COLOR11       '#FFFFA5'
-    - &COLOR12       '#D6ACFF'
-    - &COLOR13       '#FF92DF'
-    - &COLOR14       '#A4FFFF'
-    - &COLOR15       '#FFFFFF'
+    - &COLOR0         '#21222C'
+    - &COLOR1         '#FF5555'
+    - &COLOR2         '#50FA7B'
+    - &COLOR3         '#F1FA8C'
+    - &COLOR4         '#BD93F9'
+    - &COLOR5         '#FF79C6'
+    - &COLOR6         '#8BE9FD'
+    - &COLOR7         '#F8F8F2'
+    - &COLOR8         '#6272A4'
+    - &COLOR9         '#FF6E6E'
+    - &COLOR10        '#69FF94'
+    - &COLOR11        '#FFFFA5'
+    - &COLOR12        '#D6ACFF'
+    - &COLOR13        '#FF92DF'
+    - &COLOR14        '#A4FFFF'
+    - &COLOR15        '#FFFFFF'
   brightOther:
     # Temporary (awaiting fix)
     - &TEMP_QUOTES          '#E9F284'
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
-    - &LineHighlight '#44475A75'
-    - &NonText       '#424450'
-    - &WHITE         '#FFFFFF'
-    - &TAB_DROP_BG   '#44475A70'
+    - &LineHighlight  '#44475A75'
+    - &NonText        '#424450'
+    - &WHITE          '#FFFFFF'
+    - &TAB_DROP_BG    '#44475A70'
     # UI Variants
-    - &BGLighter     '#424450'
-    - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
-    - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
-    - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    - &BGLighter      '#424450'
+    - &BGLight        '#343746' # HSV (230   , 25.71, 27.45)
+    - &BGDark         '#21222C' # HSV (234.55, 25   , 17.25)
+    - &BGDarker       '#191A21' # HSV (234.55, 25   , 13   )
+  golden:
+    - &color1         '#17191a'
+    - &color2         '#222628'
+    - &color8         '#373d41'
+    - &color3         '#25292b'
+    - &color4         '#292e30'
+    - &color5         '#2e3336'
+    - &color6         '#33383b'
+    - &color7         '#353b3e'
+    - &color9         '#3a4044'
+    - &color10        '#41484c'
+    - &color11        '#454d52'
+    - &color12        '#515a5f'
+    - &color13        '#586268'
+    - &color14        '#5d676d'
+    - &color16        '#69d2e7'
+    - &color18        '#748189'
+    - &color19        '#828e94'
+    - &color20        '#909aa0'
+    - &color21        '#9d37fc'
+    - &color22        '#a7da1e'
+    - &color23        '#a7dbd8'
+    - &color24        '#ba0e2e'
+    - &color25        '#c1ecf5'
+    - &color26        '#e61f44'
+    - &color27        '#e6e6d1'
+    - &color28        '#eff9f8'
+    - &color29        '#f03e5f'
+    - &color30        '#f1f1e5'
+    - &color31        '#f38630'
+    - &color36        '#f3f3e8'
+    - &color37        '#f6a260'
+    - &color38        '#f7b83d'
+    - &color39        '#f8f8f0'
+    - &color40        '#f8f8f2'
+    - &color41        '#f9be90'
+    - &color42        '#fa6900'
+    - &color45        '#ffa361'
+    - &color46        '#ffffff'
+
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
 
   # Integrated Terminal Colors
-  terminal.background: *BG
-  terminal.foreground: *FG
+  terminal.background: *color2
+  terminal.foreground: *color40
   terminal.ansiBrightBlack: *COLOR8
   terminal.ansiBrightRed: *COLOR9
   terminal.ansiBrightGreen: *COLOR10
@@ -76,28 +114,28 @@ colors:
   contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
 
   # Base Colors
-  focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
-  foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
+  focusBorder: *color31                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
+  foreground: *color40                                                          # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
   selection.background: *PURPLE                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
-  button.background: *SELECTION                                                 # Button background color
-  button.foreground: *FG                                                        # Button foreground color
+  button.background: *color42
+  button.foreground: *color46                                                   # Button foreground color
   button.hoverBackground:                                                       # Button background color when hovering
 
   # Dropdown Control
-  dropdown.background: *BGLight                                                 # Dropdown background
-  dropdown.border: *BGDarker                                                    # Dropdown border
-  dropdown.foreground: *FG                                                      # Dropdown foreground
+  dropdown.background: *color4
+  dropdown.border: *color4
+  dropdown.foreground: *color40                                                 # Dropdown foreground
 
   # Input Control
-  input.background: *BG                                                         # Input box background
-  input.foreground: *FG                                                         # Input box foreground
-  input.border: *BGDarker                                                       # Input box border
-  input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
-  inputOption.activeBorder: *PURPLE                                             # Border color of activated options in input fields
+  input.background: *color2
+  input.foreground: *color40
+  input.border: *color12                                                        # Input box border
+  input.placeholderForeground: *color13                                         # Input box foreground color for placeholder text
+  inputOption.activeBorder: *color42                                            # Border color of activated options in input fields
   inputValidation.infoBackground:                                               # Input validation background color for information severity
   inputValidation.infoBorder: *PINK                                             # Input validation border color for information severity
   inputValidation.warningBackground:                                            # Input validation background color for information warning
@@ -106,26 +144,26 @@ colors:
   inputValidation.errorBorder: *RED                                             # Input validation border color for error severity
 
   # Scroll Bar Control
-  scrollbar.shadow:                                                             # Scroll Bar shadow to indicate that the view is scrolled
-  scrollbarSlider.activeBackground:                                             # Slider background color when active
-  scrollbarSlider.background:                                                   # Slider background color
-  scrollbarSlider.hoverBackground:                                              # Slider background color when hovering
+  scrollbar.shadow: *color1                                                     # Scroll Bar shadow to indicate that the view is scrolled
+  scrollbarSlider.activeBackground: !alpha [*color31, 67]                       # Slider background color when active
+  scrollbarSlider.background: !alpha [*color14, 66]                             # Slider background color
+  scrollbarSlider.hoverBackground: !alpha [*color31, 33]                        # Slider background color when hovering
 
   # Badge
-  badge.foreground: *FG                                                         # Badge foreground color
-  badge.background: *SELECTION                                                  # Badge background color
+  badge.foreground: *color46                                                    # Badge foreground color
+  badge.background: *color31                                                    # Badge background color
 
   # Progress Bar
-  progressBar.background: *PINK                                                 # Background color of the progress bar shown for long running operations
+  progressBar.background: *color16                                              # Background color of the progress bar shown for long running operations
 
   # List & Trees
-  list.activeSelectionBackground: *SELECTION                                    # List/Tree background color for the selected item when the list/tree is active
-  list.activeSelectionForeground: *FG                                           # List/Tree foreground color for the selected item when the list/tree is active
+  list.activeSelectionBackground: *color42                                      # List/Tree background color for the selected item when the list/tree is active
+  list.activeSelectionForeground: *color5                                       # List/Tree foreground color for the selected item when the list/tree is active
   list.dropBackground: *SELECTION                                               # List/Tree drag and drop background when moving items around using the mouse
-  list.focusBackground: *LineHighlight                                          # List/Tree background color for the focused item when the list/tree is active
+  list.focusBackground: *color12                                                # List/Tree background color for the focused item when the list/tree is active
   list.highlightForeground: *CYAN                                               # List/Tree foreground color of the match highlights when searching inside the list/tree
-  list.hoverBackground: *LineHighlight                                          # List/Tree background when hovering over items using the mouse
-  list.inactiveSelectionBackground: *LineHighlight                              # List/Tree background color for the selected item when the list/tree is inactive
+  list.hoverBackground: *color7                                                 # List/Tree background when hovering over items using the mouse
+  list.inactiveSelectionBackground: *color5                                     # List/Tree background color for the selected item when the list/tree is inactive
   list.inactiveSelectionForeground:                                             # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
   list.warningForeground: *ORANGE                                               # Color of warning decorations in the explorer
   list.errorForeground: *RED                                                    # Color of error decorations in the explorer
@@ -133,42 +171,42 @@ colors:
   list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
   # Activity Bar
-  activityBar.background: *BGLight                                              # Activity Bar background color
+  activityBar.background: *color6                                               # Activity Bar background color
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
-  activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
+  activityBar.foreground: *color40                                              # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
-  activityBarBadge.background: *PINK                                            # Activity notification badge background color
-  activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
+  activityBarBadge.background: *color31
+  activityBarBadge.foreground: *color46                                         # Activity notification badge foreground color
 
   # Side Bar
-  sideBar.background: *BGDark                                                   # Side Bar background color
-  sideBar.foreground:                                                           # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
+  sideBar.background: *color9
+  sideBar.foreground: *color40                                                  # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
   sideBar.border:                                                               # Side Bar border color on the side separating the editor
   sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
-  sideBarSectionHeader.background:                                              # Side Bar section header background color
-  sideBarSectionHeader.foreground:                                              # Side Bar section header foreground color
+  sideBarSectionHeader.background: *color10
+  sideBarSectionHeader.foreground: *color40                                     # Side Bar section header foreground color
 
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
-  editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
+  editorGroup.border: *color1                                                   # Color to separate multiple editor groups from each other
   editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
-  editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
-  editorGroupHeader.tabsBorder:                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
-  tab.activeBackground: *BG                                                     # Active Tab background color
+  editorGroupHeader.tabsBackground: *color1                                     # Background color of the Tabs container
+  editorGroupHeader.tabsBorder: *color1                                         # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
+  tab.activeBackground: *color3                                                 # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
-  tab.border: *BGDarker                                                         # Border to separate Tabs from each other
+  tab.border: *color1                                                           # Border to separate Tabs from each other
   tab.activeBorder: !alpha [*PINK, 80]                                          # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
-  tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
-  tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
+  tab.inactiveBackground: *color2                                               # Inactive Tab background color
+  tab.inactiveForeground: *color18                                              # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground:                                                # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground:                                              # Inactive tab foreground color in an inactive editor group
 
   # Editor Colors
   editor.foreground: *FG
-  editor.background: *BG
-  editorLineNumber.foreground: *COMMENT
+  editor.background: *color2
+  editorLineNumber.foreground: *color14
   editorCursor.foreground:
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
@@ -221,17 +259,17 @@ colors:
   editorWarning.foreground: *CYAN                                               # Foreground color of warning squigglies in the editor
   editorWarning.border:                                                         # Border color of warning squigglies in the editor
 
-  editorGutter.background:                                                      # Background color of the editor gutter
-  editorGutter.modifiedBackground: !alpha [ *CYAN, 80 ]                         # Editor gutter background color for lines that are modified
-  editorGutter.addedBackground:    !alpha [ *GREEN,  80 ]                       # Editor gutter background color for lines that are added
-  editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
+  editorGutter.background: *color4
+  editorGutter.modifiedBackground: *color41
+  editorGutter.addedBackground: *color22
+  editorGutter.deletedBackground: *color26                                      # Editor gutter background color for lines that are deleted
 
   # Explorer Colors
-  gitDecoration.modifiedResourceForeground: *CYAN
-  gitDecoration.deletedResourceForeground: *RED
-  gitDecoration.untrackedResourceForeground: *GREEN
-  gitDecoration.ignoredResourceForeground: *COMMENT
-  gitDecoration.conflictingResourceForeground: *ORANGE
+  gitDecoration.modifiedResourceForeground: *color41
+  gitDecoration.deletedResourceForeground: *color26
+  gitDecoration.untrackedResourceForeground: *color22
+  gitDecoration.ignoredResourceForeground: *color18
+  gitDecoration.conflictingResourceForeground: *color21
 
   # Diff Editor Colors
   diffEditor.insertedTextBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted text
@@ -244,7 +282,7 @@ colors:
   editorWidgetBorder:                                                           # Border color of the editor widget unless the widget does not contain a border or defines its own border color
 
   editorSuggestWidget.background: *BGDark                                       # Background color of the suggestion widget
-  editorSuggestWidget.border:                                                   # Border color of the suggestion widget
+  editorSuggestWidget.border: *color41                                          # Border color of the suggestion widget
   editorSuggestWidget.foreground: *FG                                           # Foreground color of the suggestion widget
   editorSuggestWidget.highlightForeground:                                      # Color of the match highlights in the suggestion widget
   editorSuggestWidget.selectedBackground: *SELECTION                            # Background color of the selected entry in the suggestion widget
@@ -260,19 +298,19 @@ colors:
   editorMarkerNavigationWarning.background:                                     # Editor marker navigation widget warning color
 
   # Peek View Colors
-  peekView.border: *SELECTION                                                   # Color of the peek view borders and arrow
-  peekViewEditor.background: *BG                                                # Background color of the peek view editor
-  peekViewEditorGutter.background:                                              # Background color of the gutter in the peek view editor
-  peekViewEditor.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view editor
-  peekViewResult.background: *BGDark                                            # Background color of the peek view result list
-  peekViewResult.fileForeground: *FG                                            # Foreground color for file nodes in the peek view result list
-  peekViewResult.lineForeground: *FG                                            # Foreground color for line nodes in the peek view result list
-  peekViewResult.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view result list
-  peekViewResult.selectionBackground: *SELECTION                                # Background color of the selected entry in the peek view result list
-  peekViewResult.selectionForeground: *FG                                       # Foreground color of the selected entry in the peek view result list
-  peekViewTitle.background: *BGDarker                                           # Background color of the peek view title area
-  peekViewTitleDescription.foreground: *COMMENT                                 # Color of the peek view title info
-  peekViewTitleLabel.foreground: *FG                                            # Color of the peek view title
+  peekView.border: *color31
+  peekViewEditor.background: *color3
+  peekViewEditorGutter.background: *color4                                      # Background color of the gutter in the peek view editor
+  peekViewEditor.matchHighlightBackground: !alpha [*color42, 33]                # Match highlight color in the peek view editor
+  peekViewResult.background: *color9                                            # Background color of the peek view result list
+  peekViewResult.fileForeground: *color30                                       # Foreground color for file nodes in the peek view result list
+  peekViewResult.lineForeground: *color27                                       # Foreground color for line nodes in the peek view result list
+  peekViewResult.matchHighlightBackground: !alpha [*color42, 33]                # Match highlight color in the peek view result list
+  peekViewResult.selectionBackground: *color6                                   # Background color of the selected entry in the peek view result list
+  peekViewResult.selectionForeground: *color40                                  # Foreground color of the selected entry in the peek view result list
+  peekViewTitle.background: *color4                                             # Background color of the peek view title area
+  peekViewTitleDescription.foreground: *color36                                 # Color of the peek view title info
+  peekViewTitleLabel.foreground: *color40                                       # Color of the peek view title
 
   # Merge Conflicts
   merge.currentHeaderBackground: !alpha [ *GREEN, 90 ]                          # Current header background in inline merge conflicts
@@ -284,48 +322,48 @@ colors:
   editorOverviewRuler.incomingContentForeground: *PURPLE                        # Incoming overview ruler foreground for inline merge conflicts
 
   # Panel Colors
-  panel.background: *BG                                                         # Panel background color
-  panel.border: *PURPLE                                                         # Panel border color on the top separating to the editor
+  panel.background: *color11                                                    # Panel background color
+  panel.border: *color31                                                        # Panel border color on the top separating to the editor
   panelTitle.activeBorder: *PINK                                                # Border color for the active panel title
   panelTitle.activeForeground: *FG                                              # Title color for the active panel
-  panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
+  panelTitle.inactiveForeground: *color19                                       # Title color for the inactive panel
 
   # Status Bar Colors
-  statusBar.background: *BGDarker                                               # Standard Status Bar background color
-  statusBar.foreground: *FG                                                     # Status Bar foreground color
+  statusBar.background: *color1
+  statusBar.foreground: *color46                                                # Status Bar foreground color
   statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
-  statusBar.noFolderBackground: *BGDarker                                       # Status Bar foreground color when no folder is opened
-  statusBar.noFolderForeground: *FG                                             # Status Bar background color when no folder is opened
+  statusBar.noFolderBackground: *color1                                         # Status Bar foreground color when no folder is opened
+  statusBar.noFolderForeground: *color46                                        # Status Bar background color when no folder is opened
   statusBarItem.activeBackground:                                               # Status Bar item background color when clicking
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
-  statusBar.border:
+  statusBar.border: *color41
 
-  # Title Bar Colors (MacOS Only)
-  titleBar.activeBackground: *BGDark                                            # Title Bar background when the window is active
+  # Title Bar Colors
+  titleBar.activeBackground: *color1                                            # Title Bar background when the window is active
   titleBar.activeForeground: *FG                                                # Title Bar foreground when the window is active
-  titleBar.inactiveBackground: *BGDarker                                        # Title Bar background when the window is inactive
-  titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
+  titleBar.inactiveBackground: *color1                                          # Title Bar background when the window is inactive
+  titleBar.inactiveForeground: *color20                                         # Title Bar foreground when the window is inactive
 
   # Notification Dialog Colors
-  notification.background: *BG                                                  # Notifications background color
-  notification.foreground: *FG                                                  # Notifications foreground color
-  notification.buttonBackground: *SELECTION
-  notification.buttonForeground: *FG
+  notification.background: *color9
+  notification.foreground: *color40
+  notification.buttonBackground: *color31
+  notification.buttonForeground: *color46
   notification.buttonHoverBackground: *LineHighlight
-  notification.errorBackground: *RED
-  notification.errorForeground: *FG
-  notification.infoBackground: *CYAN
-  notification.infoForeground: *BG
-  notification.warningBackground: *ORANGE
-  notification.warningForeground: *BG
+  notification.errorBackground: *color26
+  notification.errorForeground: *color46
+  notification.infoBackground: *color21
+  notification.infoForeground: *color46
+  notification.warningBackground: *color38
+  notification.warningForeground: *color46
 
   # Extensions
-  extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button)
-  extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
-  extensionButton.prominentHoverBackground: !alpha [ *GREEN, 60 ]               # Extension view button background hover color
+  extensionButton.prominentForeground: *color46                                 # Extension view button foreground color (for example Install button)
+  extensionButton.prominentBackground: *color31                                 # Extension view button background color
+  extensionButton.prominentHoverBackground: *color37                            # Extension view button background hover color
 
   # Quick Picker
   pickerGroup.border: *PURPLE                                                   # Quick picker (Quick Open) color for grouping borders
@@ -358,8 +396,8 @@ colors:
   settings.numberInputBorder:          *BGDarker                                # Number input box border
 
   # Breadcrumbs
-  breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items
-  breadcrumb.background: *BGDark
+  breadcrumb.foreground: *color20                                               # Color of breadcrumb items
+  breadcrumb.background: *color1
   breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items
   breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items
   breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker

@@ -1,22 +1,20 @@
 {
-	"name": "theme-dracula",
-	"version": "2.14.1",
-	"displayName": "Dracula Official",
+	"name": "theme-golden-dracula",
+	"version": "1.0.0",
+	"displayName": "Golden Dracula",
 	"homepage": "https://draculatheme.com/",
-	"description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
-	"publisher": "dracula-theme",
+	"description": "Golden Dracula Theme. Based on the original Dracula vscode theme",
+	"publisher": "mnxn",
 	"license": "MIT",
 	"scripts": {
 		"attach": "./bootstrap.sh attach",
 		"build": "node ./build.js",
 		"eject": "./bootstrap.sh eject",
-		"package": "vsce package -o ./bin/dracula.vsix",
+		"package": "vsce package -o ./bin/golden-dracula.vsix",
 		"vscode:prepublish": "npm run build"
 	},
-	"maintainers": [
-		"Derek P Sifford <dereksifford@gmail.com>"
-	],
 	"contributors": [
+		"Max L",
 		"Krzysztof Wisznarewski",
 		"Daniel Ramos",
 		"Eric Jackson",
@@ -26,10 +24,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dracula/visual-studio-code.git"
+		"url": "https://github.com/mnxn/Golden-Dracula.git"
 	},
 	"bugs": {
-		"url": "https://github.com/dracula/visual-studio-code/issues"
+		"url": "https://github.com/mnxn/Golden-Dracula/issues"
 	},
 	"engines": {
 		"vscode": "^1.13.0"
@@ -38,6 +36,7 @@
 		"Themes"
 	],
 	"keywords": [
+		"golden",
 		"dracula",
 		"dark",
 		"theme",
@@ -51,14 +50,9 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Dracula",
+				"label": "Golden Dracula",
 				"uiTheme": "vs-dark",
-				"path": "./theme/dracula.json"
-			},
-			{
-				"label": "Dracula Soft",
-				"uiTheme": "vs-dark",
-				"path": "./theme/dracula-soft.json"
+				"path": "./theme/golden-dracula.json"
 			}
 		]
 	},
@@ -66,10 +60,5 @@
 		"js-yaml": "^3.12.0",
 		"prettier": "^1.14.3",
 		"tinycolor2": "^1.4.1"
-	},
-	"__metadata": {
-		"id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
-		"publisherDisplayName": "Dracula Theme",
-		"publisherId": "fbb3d024-f8f2-460c-bdb5-99552f6d8c4b"
 	}
 }

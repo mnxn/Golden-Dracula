@@ -4,7 +4,7 @@ const tinycolor = require('tinycolor2');
 const yaml = require('js-yaml');
 
 const THEME_DIR = path.join(__dirname, 'theme');
-const THEME_YAML_FILE = path.join(__dirname, 'src', 'dracula.yml');
+const THEME_YAML_FILE = path.join(__dirname, 'src', 'golden-dracula.yml');
 
 if (!fs.existsSync(THEME_DIR)) {
     fs.mkdirSync(THEME_DIR);
@@ -43,10 +43,6 @@ const soft = standard.replace(/'(#[0-9A-Z]{6})/g, (match, hex) => {
 });
 
 fs.writeFileSync(
-    path.join(THEME_DIR, 'dracula.json'),
+    path.join(THEME_DIR, 'golden-dracula.json'),
     JSON.stringify(yaml.load(standard, { schema }), null, 4)
-);
-fs.writeFileSync(
-    path.join(THEME_DIR, 'dracula-soft.json'),
-    JSON.stringify(yaml.load(soft, { schema }), null, 4)
 );
