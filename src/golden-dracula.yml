@@ -904,7 +904,7 @@ tokenColors:
     - storage.type.haskell
     - storage.type.ocaml
     settings:
-      fontStyle: italic
+      fontStyle: regular
       foreground: *CYAN
 
   - name: Generics, templates, and mapped type declarations
