@@ -1,13 +1,12 @@
 {
 	"name": "theme-golden-dracula",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"displayName": "Golden Dracula",
 	"homepage": "https://draculatheme.com/",
 	"description": "Golden Dracula Theme. Based on the original Dracula vscode theme",
 	"publisher": "mnxn",
 	"license": "MIT",
 	"scripts": {
-		"attach": "./bootstrap.sh attach",
 		"build": "node ./build.js",
 		"eject": "./bootstrap.sh eject",
 		"package": "vsce package -o ./bin/golden-dracula.vsix",
@@ -48,11 +47,13 @@
 		"theme": "dark"
 	},
 	"contributes": {
-		"themes": [{
-			"label": "Golden Dracula",
-			"uiTheme": "vs-dark",
-			"path": "./theme/golden-dracula.json"
-		}]
+		"themes": [
+			{
+				"label": "Golden Dracula",
+				"uiTheme": "vs-dark",
+				"path": "./theme/golden-dracula.json"
+			}
+		]
 	},
 	"devDependencies": {
 		"js-yaml": "^3.12.0",
