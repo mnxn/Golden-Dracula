@@ -205,7 +205,7 @@ colors:
   editor.foreground: *FG
   editor.background: *color2
   editorLineNumber.foreground: *color14
-  ? editorCursor.foreground
+  editorCursor.foreground:
 
   editor.selectionBackground: *SELECTION # Color of the editor selection
   editor.selectionHighlightBackground: *BGLighter # Color for regions with the same content as the selection
@@ -240,8 +240,8 @@ colors:
   editorBracketMatch.border: # Color for matching brackets boxes
 
   editorOverviewRuler.border: *BGDarker # Color of the overview ruler border
-  ? editorOverviewRuler.findMatchForeground
-  ? editorOverviewRuler.rangeHighlightForeground
+  editorOverviewRuler.findMatchForeground:
+  editorOverviewRuler.rangeHighlightForeground:
   editorOverviewRuler.selectionHighlightForeground: *ORANGE
   editorOverviewRuler.wordHighlightForeground: *CYAN
   editorOverviewRuler.wordHighlightStrongForeground: *GREEN
@@ -409,7 +409,7 @@ tokenColors:
   - scope:
       - emphasis
     settings:
-      fontStyle: italics
+      fontStyle: italic
   - scope:
       - strong
     settings:
@@ -585,12 +585,13 @@ tokenColors:
     scope:
       - keyword.expressions-and-types.swift
       - keyword.other.this
+      - variable.language
       - variable.language punctuation.definition.variable.php # the "$" symbol in $this
       - variable.other.readwrite.instance.ruby # ruby's "@" instance symbol
       - variable.parameter.function.language.special # Special words as parameters
     settings:
       foreground: *PURPLE
-      fontStyle: bold
+      fontStyle: italic
 
   - name: Inherited classes
     scope:
