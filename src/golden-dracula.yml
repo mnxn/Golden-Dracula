@@ -741,7 +741,6 @@ tokenColors:
     scope:
       - support
     settings:
-      fontStyle: bold
       foreground: *CYAN
 
   - name: Built-in magic functions and constants
