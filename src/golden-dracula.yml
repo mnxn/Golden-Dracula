@@ -790,6 +790,8 @@ tokenColors:
       - string.unquoted.heredoc punctuation.definition.string
       - support.other.chomping-indicator.yaml
       - punctuation.separator.annotation
+      - punctuation.separator.period
+      - punctuation.other.period
     settings:
       foreground: *PINK
 
