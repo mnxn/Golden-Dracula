@@ -994,14 +994,6 @@ tokenColors:
   # Variables
   # =============================================================================
 
-  - name: Variables definition
-    scope:
-      - variable.other.definition
-      - variable.other.assignment
-      - variable.other.declaration
-    settings:
-      foreground: *ORANGE
-
   - name: Variables and object properties
     scope:
       - variable
