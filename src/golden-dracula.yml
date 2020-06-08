@@ -1,6 +1,7 @@
 name: Golden Dracula
 author: Max L, Zeno Rocha
 semanticClass: theme.golden-dracula
+semanticHighlighting: true
 dracula:
   base:
     - &BG "#282A36"
